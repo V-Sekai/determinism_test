@@ -22,6 +22,9 @@ func _reset() -> void:
 	PhysicsServer3D.body_set_state(get_rid(), PhysicsServer3D.BODY_STATE_LINEAR_VELOCITY, Vector3())
 	PhysicsServer3D.body_set_state(get_rid(), PhysicsServer3D.BODY_STATE_ANGULAR_VELOCITY, Vector3())
 	PhysicsServer3D.body_set_state(get_rid(), PhysicsServer3D.BODY_STATE_SLEEPING, false)
+	
+	PhysicsServer3D.body_set_space(get_rid(), RID())
+	Manager.physics_bodies_to_update.append(get_rid())
 			
 func _physics_process(_delta: float) -> void:
 	# Sets all the physics objects back to their original transforms

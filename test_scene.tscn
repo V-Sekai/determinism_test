@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dqhmviole3j0p"]
+[gd_scene load_steps=7 format=3 uid="uid://dqhmviole3j0p"]
 
 [ext_resource type="PackedScene" uid="uid://v3orgbtoihbt" path="res://physics_object.tscn" id="1_le5bp"]
-[ext_resource type="Script" path="res://test_scene.gd" id="1_pl2cf"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_mwhfn"]
 
@@ -18,7 +17,6 @@ sky = SubResource("Sky_a3d4c")
 tonemap_mode = 3
 
 [node name="GameMap" type="Node3D"]
-script = ExtResource("1_pl2cf")
 
 [node name="Geometry" type="Node3D" parent="."]
 
